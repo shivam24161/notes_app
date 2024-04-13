@@ -1,0 +1,61 @@
+#add_note{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+.notes_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3vw;
+    margin: 1vw;
+    background-color: #89A9D3;
+    padding-top: 2vw;
+    padding-bottom:10vw;
+}
+
+.text_editor_div{
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    width: 45vw;
+}
+#text_editor{
+    width: 40vw;
+    font-size: 2vw;
+}
+.heading{
+    font-size: 1.5vw;
+}
+#add{
+    background-color: green;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+#clear{
+    background-color: red;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.button_div{
+    display: flex;
+    column-gap: 1vw;
+}
+.heading > input{
+    padding: 1.3vw;
+    font-size: 1.7vw;
+}
+
+.add_desc{
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#arrow{
+    width: 6vw;
+}
+#add_btn{
+    background-color: green;
+    color: white;
+    padding: 0.5vw;
+    font-weight: bold;
+    font-size: 1.5vw;
+}

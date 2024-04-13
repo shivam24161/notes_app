@@ -1,0 +1,67 @@
+.main_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.notes_card_main {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  width: 100%;
+  column-gap: 2vw;
+  row-gap: 2vw;
+  padding: 1vw;
+}
+.notes_card {
+  background-color: goldenrod;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1vw;
+}
+.main_div_display {
+  display: flex;
+  justify-content: space-between;
+}
+.edit_delete_btn {
+  float: right;
+}
+.date_div {
+  padding-top: 1vw;
+  float: left;
+}
+#editheading {
+  padding: 1vw;
+}
+#textarea {
+  padding: 1vw;
+  padding-bottom: 2vw;
+}
+.edit_modal_div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vw;
+}
+#save_edit {
+  background-color: darkgreen;
+}
+#clear_edit {
+  margin: 1vw;
+  background-color: red;
+}
+.update_notes {
+  text-decoration: underline;
+}
+#delete1 {
+  background-color: red;
+  color: white;
+  margin: 1vw;
+}
+#cancel1 {
+  background-color: grey;
+  color: white;
+  margin: 1vw;
+}
+#notes_empty_img {
+  width: 300px;
+}
