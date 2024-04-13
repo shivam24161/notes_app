@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useContext, useState } from "react";
-import "./Notes.css";
+import { useContext } from "react";
 import { notesContext } from "./Mycontext";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -9,6 +8,7 @@ import Popover from "@mui/material/Popover";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { TextareaAutosize } from "@mui/material";
+import "./Notes.css";
 
 const style = {
   position: "absolute",
@@ -21,6 +21,7 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+
 const Notes = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
@@ -40,6 +41,7 @@ const Notes = () => {
         setHeadingText(i.heading);
         setdescText(i.description);
       }
+      return null;
     });
     setOpen(true);
   };
@@ -86,7 +88,6 @@ const Notes = () => {
     const id1 = event.target.id;
     const id2 = event.target.parentElement.id;
     if (id1 !== "") {
-      console.log(id1);
       setdelId(id1);
     } else if (id2 !== "") {
       console.log(id2);
@@ -100,9 +101,8 @@ const Notes = () => {
 
   const openDel = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-  //
+
   return (
-    <>
       <div className="main_div">
         {obj.notes.length === 0 ? (
           <div className="notes_empty">
@@ -120,7 +120,6 @@ const Notes = () => {
               ? obj.notes.map((i, index) => {
                   var id1 = index;
                   return (
-                    <>
                       <div className="notes_card">
                         {" "}
                         <div className="main_div_display">
@@ -168,7 +167,6 @@ const Notes = () => {
                           }}
                         ></p>
                       </div>
-                    </>
                   );
                 })
               : obj.notes.map((i, index) => {
@@ -177,7 +175,6 @@ const Notes = () => {
                   const isIncludes=title.includes(obj.searchText);
                   if (isIncludes) {
                     return (
-                      <>
                         <div className="notes_card">
                           {" "}
                           <div className="main_div_display">
@@ -225,13 +222,13 @@ const Notes = () => {
                             }}
                           ></p>
                         </div>
-                      </>
                     );
                   } else if(!isIncludes){
                     return (
                       <h1>No result found...</h1>
                     );
                   }
+                  return null
                 })}
           </div>
         )}
@@ -282,7 +279,6 @@ const Notes = () => {
           </Box>
         </Modal>
       </div>
-    </>
   );
 };
 export default Notes;

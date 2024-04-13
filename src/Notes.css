@@ -1,8 +1,10 @@
 .main_div {
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
+  overflow-y: auto;
 }
 .notes_card_main {
   display: grid;
